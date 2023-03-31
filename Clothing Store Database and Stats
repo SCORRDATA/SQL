@@ -1,0 +1,28 @@
+-Create a clothing store database with 15 items and include data about the items.
+
+create table clothing_store (id integer primary key, name text, selling_price integer, quantity integer, rate_of_sale text);
+
+insert into clothing_store values 
+(1, "basic tee", 4 , 15, "FAST"),
+(2, "jeans" , 15, 10, "SLOW"),
+(3, "socks" , 2, 30, "SLOW"),
+(4, "jumper", 12, 32, "MEDIUM"),
+(5, "jumpsuits", 40, 16, "FAST"),
+(6, "leggings", 22, 5, "FAST"),
+(7, "sports bra", 18, 22, "MEDIUM"),
+(8, "printed tee", 6, 28, "SLOW"),
+(9, "joggers", 10, 15, "FAST"),
+(10, "shorts", 12, 55, "SLOW"),
+(11, "sunglasses", 50, 10, "SLOW"), 
+(12, "hats", 30, 15, "FAST"),
+(13, "skirts", 20, 12, "SLOW"),
+(14, "jumpsuits", 45, 19, "FAST"),
+(15, "dresses", 25, 50, "MEDIUM");
+
+-display the database ordered by price, low to high.
+
+SELECT id, name, selling_price from clothing_store ORDER BY selling_price asc;
+
+-group items by rate of sale slow/medium/fast.
+SELECT id,name, rate_of_sale from clothing_store
+ORDER BY rate_of_sale 
